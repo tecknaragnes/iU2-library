@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="main.js"></script>
+    <title>Översikt - Mina sidor</title>
+</head>
+
+<body>
+    <header>
+        <h1>Bibliotek - Mina sidor</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li id="current-page">
+                <h2>Översikt</h2>
+            </li>
+            <li>
+                <h2><a href="lists.html">Listor och sparat</a></h2>
+            </li>
+            <li>
+                <h2>Historik och recensioner</h2>
+            </li>
+            <li>
+                <h2>Konto och inställningar</h2>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="page overview">
+        <section id="left-side">
+            <section class="sec">
+                <h3>Mina uppgifter</h3>
+                <hr>
+                <p>Låntagarid: 123456</p>
+                <p>Lånekortsnummer: 123456789</p>
+                <p>Pinkod:</p>
+                <button>Visa pinkod</button>
+                <button>Ändra pinkod</button>
+                <p>Mejladress: hej@mejl.se</p>
+                <p>Telefonnummer: 0761234567</p>
+            </section>
+            <section class="sec">
+                <h3>Avgifter</h3>
+                <hr>
+                <p>Att betala: 10 kr</p>
+                <p>Betalningshistorik: Ingen historik</p>
+            </section>
+        </section>
+
+        <section id="right-side">
+            <section class="sec reminders">
+                <h3>Påminnelser</h3>
+                <hr>
+                <!-- Meddelanden från biblioteket, kort lånetid, reservationer att hämta, inköpsförslag -->
+                <div id="payment">
+                    <p>Avgift att betala: 10 kr (besök bibliotekets reception)</p>
+                </div>
+                <div class="bok">
+                    <img src="img/" alt="">
+                    <!-- bokomslag -->
+                    <span>
+                        <p>He Who Drowned the World (2023)</p>
+                        <p>Parker-Chan, Shelley</p>
+                        <p>Lån utgår: 01-04-2026</p>
+                        <!-- visa att lånet utgår tydligare: symbol/färg -->
+                    </span>
+                    <button class="omlan">Låna om ↻</button>
+                </div>
+            </section>
+
+            <section class="sec">
+                <section class="header-menu">
+                    <h3>Lån</h3>
+                    <!-- sortera snarast går ut lånetid högst upp 
+                visa stor rad för varje bok standard-->
+                    <button class="show wide">▭</button>
+                    <button class="show compact">Ξ</button>
+                </section>
+                <hr>
+
+                <div class="bok">
+                    <img src="img/" alt="">
+                    <!-- bokomslag -->
+                    <span>
+                        <p>He Who Drowned the World (2023)</p>
+                        <p>Parker-Chan, Shelley</p>
+                        <p>Lån utgår: 01-04-2026</p>
+                        <!-- visa att lånet utgår tydligare: symbol/färg -->
+                    </span>
+                    <button class="omlan">Låna om ↻</button>
+                </div>
+                <div class="bok">
+                    <img src="img/" alt="">
+                    <!-- bokomslag -->
+                    <span>
+                        <p>The Long Way to a Small, Angry Planet (2014)</p>
+                        <p>Chambers, Becky</p>
+                        <p>Lån utgår: 12-04-2026</p>
+                        <!-- visa att lånet utgår tydligare: symbol/färg -->
+                    </span>
+                    <button class="omlan">Låna om ↻</button>
+                </div>
+            </section>
+
+            <section class="sec">
+                <section class="header-menu">
+                    <h3>Reservationer</h3>
+                    <button class="show wide">▭</button>
+                    <button class="show compact">Ξ</button>
+                </section>
+                <hr>
+                <p>Förvalt hämtställe: <span id="collect-place">Teleborg</span> <a href="account.html">Ändra hämtställe</a></p>
+
+                <div class="bok">
+                    <img src="img/" alt="">
+                    <!-- bokomslag -->
+                    <span>
+                        <p>Ökenplanetens Messias (1985)</p>
+                        <p>Herbert, Frank</p>
+                        <p>Tillgänglig: 09-04-2026</p>
+                        <!-- visa att lånet utgår tydligare: symbol/färg -->
+                    </span>
+                    <button class="omlan">Ta bort 🗑️</button>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <!-- biblioteket -->
+    </footer>
+</body>
+
+</html>

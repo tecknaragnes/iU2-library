@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="main.js"></script>
+    <title>Listor och sparat - Mina sidor</title>
+</head>
+
+<body>
+    <header>
+        <h1>Mina sidor</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li>
+                <h2><a href="index.html">Översikt</a></h2>
+            </li>
+            <li id="current-page">
+                <h2>Listor och sparat</h2>
+            </li>
+            <li>
+                <h2>Historik och recensioner</h2>
+            </li>
+            <li>
+                <h2>Konto och inställningar</h2>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="page lists">
+        <h3>Minneslista</h3>
+        <!-- ny flik för sparade sökningar? -->
+
+        <section id="search-filter">
+            <input type="text" id="search" name="search" placeholder="Sök titel, författare...">
+            <button>Sök 🔍</button>
+
+            <label for="sort">Sortera:</label>
+            <select id="sort" name="sort">
+                <option value="recent">Senast tillagd</option>
+                <option value="title">Titel</option>
+                <option value="author">Författare</option>
+                <option value="year">Utgivningsår</option>
+            </select>
+
+            <p>Filter:</p>
+
+        </section>
+        <hr>
+
+        <section>
+            <div class="bok">
+                <img src="img/" alt="">
+                <!-- bokomslag -->
+                <span>
+                    <p>Liknelsen om Sådden (2019)</p>
+                    <p>Butler, Octavia</p>
+                    <p>Bok, fysiskt material</p>
+                </span>
+                <span class="buttons">
+                    <button class="omlan">Reservera</button>
+                    <button class="omlan">Ta bort 🗑️</button>
+                </span>
+            </div>
+            <div class="bok">
+                <img src="img/" alt="">
+                <!-- bokomslag -->
+                <span>
+                    <p>The Man Who Died Twice (2021)</p>
+                    <p>Osman, Richard</p>
+                    <p>Bok, fysiskt material</p>
+                </span>
+                <span class="buttons">
+                    <button class="omlan">Reservera</button>
+                    <button class="omlan">Ta bort 🗑️</button>
+                </span>
+            </div>
+            <div class="bok">
+                <img src="img/" alt="">
+                <!-- bokomslag -->
+                <span>
+                    <p>Crime and Punsihment (2018)</p>
+                    <p>Dostojevskij, Fjodor</p>
+                    <p>Bok, fysiskt material</p>
+                </span>
+                <span class="buttons">
+                    <button class="omlan">Reservera</button>
+                    <button class="omlan">Ta bort 🗑️</button>
+                </span>
+            </div>
+            <div class="bok">
+                <img src="img/" alt="">
+                <!-- bokomslag -->
+                <span>
+                    <p>Somewhere Beyond the Sea (2024)</p>
+                    <p>Klune, TJ</p>
+                    <p>Bok, fysiskt material</p>
+                </span>
+                <span class="buttons">
+                    <button class="omlan">Reservera</button>
+                    <button class="omlan">Ta bort 🗑️</button>
+                </span>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
