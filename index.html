@@ -57,19 +57,19 @@
                 <h3>Påminnelser</h3>
                 <hr>
                 <!-- Meddelanden från biblioteket, kort lånetid, reservationer att hämta, inköpsförslag -->
-                <div id="payment">
+                <div class="payment textbox">
                     <p>Avgift att betala: 10 kr (besök bibliotekets reception)</p>
                 </div>
-                <div class="bok">
-                    <img src="img/" alt="">
+                <div class="bok drowned reminder">
+                    <img src="img/thumbnail-drowned.jpg" alt="">
                     <!-- bokomslag -->
                     <span>
                         <p>He Who Drowned the World (2023)</p>
                         <p>Parker-Chan, Shelley</p>
-                        <p>Lån utgår: 01-04-2026</p>
+                        <p class="loantime notice">! Lån utgår: 01-04-2026</p>
                         <!-- visa att lånet utgår tydligare: symbol/färg -->
                     </span>
-                    <button class="omlan">Låna om ↻</button>
+                    <button class="omlan drowned">Låna om ↻</button>
                 </div>
             </section>
 
@@ -83,49 +83,57 @@
                 </section>
                 <hr>
 
-                <div class="bok">
-                    <img src="img/" alt="">
-                    <!-- bokomslag -->
-                    <span>
-                        <p>He Who Drowned the World (2023)</p>
-                        <p>Parker-Chan, Shelley</p>
-                        <p>Lån utgår: 01-04-2026</p>
-                        <!-- visa att lånet utgår tydligare: symbol/färg -->
-                    </span>
-                    <button class="omlan">Låna om ↻</button>
-                </div>
-                <div class="bok">
-                    <img src="img/" alt="">
-                    <!-- bokomslag -->
-                    <span>
-                        <p>The Long Way to a Small, Angry Planet (2014)</p>
-                        <p>Chambers, Becky</p>
-                        <p>Lån utgår: 12-04-2026</p>
-                        <!-- visa att lånet utgår tydligare: symbol/färg -->
-                    </span>
-                    <button class="omlan">Låna om ↻</button>
-                </div>
+                <section class="loans">
+                    <div class="bok drowned">
+                        <img src="img/thumbnail-drowned.jpg" alt="">
+                        <!-- bokomslag -->
+                        <span>
+                            <p>He Who Drowned the World (2023)</p>
+                            <p>Parker-Chan, Shelley</p>
+                            <p class="loantime">Lån utgår: 01-04-2026</p>
+                            <!-- visa att lånet utgår tydligare: symbol/färg -->
+                        </span>
+                        <button class="omlan drowned">Låna om ↻</button>
+                    </div>
+                    <div class="bok planet">
+                        <img src="img/thumbnail-planet.jpg" alt="">
+                        <!-- bokomslag -->
+                        <span>
+                            <p>The Long Way to a Small, Angry Planet (2014)</p>
+                            <p>Chambers, Becky</p>
+                            <p>Lån utgår: 12-04-2026</p>
+                            <!-- visa att lånet utgår tydligare: symbol/färg -->
+                        </span>
+                        <button class="omlan planet">Låna om ↻</button>
+                    </div>
+                </section>
             </section>
 
-            <section class="sec">
+            <section class="sec reserve">
                 <section class="header-menu">
                     <h3>Reservationer</h3>
                     <button class="show wide">▭</button>
                     <button class="show compact">Ξ</button>
                 </section>
                 <hr>
-                <p>Förvalt hämtställe: <span id="collect-place">Teleborg</span> <a href="account.html">Ändra hämtställe</a></p>
+                <p>Förvalt hämtställe: <span id="collect-place">Teleborg</span></p>
+                <label for="collect-select">Ändra hämtställe</label>
+                <select id="collect-select" name="collect-select">
+                    <option value="teleborg">Teleborg</option>
+                    <option value="stadsbiblioteket">Stadsbiblioteket</option>
+                    <option value="gemla">Gemla</option>
+                </select>
 
-                <div class="bok">
-                    <img src="img/" alt="">
+                <div class="bok dune">
+                    <img src="img/thumbnail-dune.jpg" alt="">
                     <!-- bokomslag -->
                     <span>
                         <p>Ökenplanetens Messias (1985)</p>
                         <p>Herbert, Frank</p>
-                        <p>Tillgänglig: 09-04-2026</p>
+                        <p>Beräknad återlämning: 09-04-2026</p>
                         <!-- visa att lånet utgår tydligare: symbol/färg -->
                     </span>
-                    <button class="omlan">Ta bort 🗑️</button>
+                    <button class="omlan dune">Ta bort 🗑️</button>
                 </div>
             </section>
         </section>
