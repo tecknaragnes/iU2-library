@@ -64,6 +64,8 @@ nav a {
     color: #fff;
 }
 
+/* ändra färg under hover, justera höjd */
+
 
 /* ---------- main ---------- */
 main {
@@ -92,6 +94,7 @@ button {
     padding: 0.4em;
     border-radius: var(--roundBorders);
     font-size: 1em;
+    cursor: pointer;
 }
 
 main .bok {
@@ -103,6 +106,10 @@ main .bok {
     align-items: center;
     gap: 0.75em;
     margin: 0.5em 0;
+}
+
+.bok img {
+    height: 130px;
 }
 
 button.omlan {
@@ -124,15 +131,19 @@ main #right-side {
 }
 
 /* ---------- right side ---------- */
-.reminders #payment {
+.textbox {
     border: 2px solid var(--accentColor2);
     background-color: #fff;
     color: #000;
     padding: 0.5em;
 }
 
-.reminders #payment p {
+.textbox p {
     margin: 0;
+}
+
+.notice {
+    color: #aa0c01;
 }
 
 .header-menu {
@@ -146,10 +157,55 @@ main #right-side {
     margin-right: auto;
 }
 
+.show {
+    width: 2.2em;
+    height: 2.2em;
+}
+
+.reserve select {
+    margin-bottom: 0.75em;
+}
+
+
+/* ---------- filter sök ---------- */
+#text-search {
+    margin-top: 1em;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+#text-search input {
+    width: 75%;
+    border: 2px solid var(--accentColor2);
+}
+
+#filters {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+/* inte absolute positioning, men ngt liknande. hide/show */
+
 
 /* ---------- minneslista ---------- */
 .lists {
     padding: 0.75em;
+}
+
+.books {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.listings .bok {
+    min-width: 600px;
+    max-width: 75%;
 }
 
 .bok .buttons {
@@ -157,4 +213,8 @@ main #right-side {
     display: flex;
     flex-flow: column wrap;
     gap: 0.5em;
+}
+
+.bok .expand {
+    margin-right: 1em;
 }

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script type="module" src="main.js"></script>
+    <script type="module" src="second.js"></script>
     <title>Listor och sparat - Mina sidor</title>
 </head>
 
@@ -36,25 +36,50 @@
         <!-- ny flik för sparade sökningar? -->
 
         <section id="search-filter">
-            <input type="text" id="search" name="search" placeholder="Sök titel, författare...">
-            <button>Sök 🔍</button>
+            <div id="text-search">
+                <input type="text" id="search" name="search" placeholder="Sök titel, författare...">
+                <button>Sök 🔍</button>
+            </div>
 
-            <label for="sort">Sortera:</label>
-            <select id="sort" name="sort">
-                <option value="recent">Senast tillagd</option>
-                <option value="title">Titel</option>
-                <option value="author">Författare</option>
-                <option value="year">Utgivningsår</option>
-            </select>
+            <div id="filters">
+                <label for="sort">Sortera:</label>
+                <select id="sort" name="sort">
+                    <option value="recent">Senast tillagd</option>
+                    <option value="oldest">Tidigast tillagd</option>
+                    <option value="title">Titel, A-Ö</option>
+                    <option value="title-rev">Titel, Ö-A</option>
+                    <option value="author">Författare, A-Ö</option>
+                    <option value="author-rev">Författare, Ö-A</option>
+                    <option value="year-old">Utgivningsår, äldst</option>
+                    <option value="year-rec">Utgivningsår, nyast</option>
+                </select>
 
-            <p>Filter:</p>
+                <p>Filter:</p>
+                <label for="genre">Genre:</label>
+                <select id="genre" name="genre">
+                    <option value="all">Välj genre...</option>
+                    <option value="fantasy">Fantasy</option>
+                    <option value="sci-fi">Science Fiction</option>
+                    <option value="dystopia">Dystopi</option>
+                    <option value="classic">Klassiker</option>
+                    <option value="mystery">Mysterium</option>
+                    <option value="crime">Kriminalare</option>
+                    <option value="romance">Romans</option>
+                </select>
 
+                <label for="language">Språk:</label>
+                <select id="language" name="language">
+                    <option value="all">Välj språk...</option>
+                    <option value="eng">Engelska</option>
+                    <option value="sve">Svenska</option>
+                </select>
+            </div>
         </section>
         <hr>
 
-        <section>
-            <div class="bok">
-                <img src="img/" alt="">
+        <section class="books listings">
+            <div class="bok sower">
+                <img src="img/thumbnail-sower.jpg" alt="">
                 <!-- bokomslag -->
                 <span>
                     <p>Liknelsen om Sådden (2019)</p>
@@ -62,12 +87,13 @@
                     <p>Bok, fysiskt material</p>
                 </span>
                 <span class="buttons">
-                    <button class="omlan">Reservera</button>
-                    <button class="omlan">Ta bort 🗑️</button>
+                    <button class="reserve sower">Reservera</button>
+                    <button class="remove">Ta bort 🗑️</button>
                 </span>
+                <button class="expand">▼</button>
             </div>
-            <div class="bok">
-                <img src="img/" alt="">
+            <div class="bok died">
+                <img src="img/thumbnail-died.jpg" alt="">
                 <!-- bokomslag -->
                 <span>
                     <p>The Man Who Died Twice (2021)</p>
@@ -75,12 +101,13 @@
                     <p>Bok, fysiskt material</p>
                 </span>
                 <span class="buttons">
-                    <button class="omlan">Reservera</button>
-                    <button class="omlan">Ta bort 🗑️</button>
+                    <button class="reserve died">Reservera</button>
+                    <button class="remove">Ta bort 🗑️</button>
                 </span>
+                <button class="expand">▼</button>
             </div>
-            <div class="bok">
-                <img src="img/" alt="">
+            <div class="bok crime">
+                <img src="img/thumbnail-crime.jpg" alt="">
                 <!-- bokomslag -->
                 <span>
                     <p>Crime and Punsihment (2018)</p>
@@ -88,12 +115,13 @@
                     <p>Bok, fysiskt material</p>
                 </span>
                 <span class="buttons">
-                    <button class="omlan">Reservera</button>
-                    <button class="omlan">Ta bort 🗑️</button>
+                    <button class="reserve crime">Reservera</button>
+                    <button class="remove">Ta bort 🗑️</button>
                 </span>
+                <button class="expand">▼</button>
             </div>
-            <div class="bok">
-                <img src="img/" alt="">
+            <div class="bok sea">
+                <img src="img/thumbnail-sea.jpg" alt="">
                 <!-- bokomslag -->
                 <span>
                     <p>Somewhere Beyond the Sea (2024)</p>
@@ -101,9 +129,10 @@
                     <p>Bok, fysiskt material</p>
                 </span>
                 <span class="buttons">
-                    <button class="omlan">Reservera</button>
-                    <button class="omlan">Ta bort 🗑️</button>
+                    <button class="reserve sea">Reservera</button>
+                    <button class="remove">Ta bort 🗑️</button>
                 </span>
+                <button class="expand">▼</button>
             </div>
         </section>
     </main>
