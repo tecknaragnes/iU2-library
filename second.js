@@ -132,8 +132,56 @@ language.addEventListener("input", () => {
 })
 
 
+// RESERVE REMOVE ---------------------------------
+const sowerBook = document.querySelector(".bok.sower");
+const reserveBtn = document.querySelector(".reserve.sower");
+reserveBtn.addEventListener("click", () => {
+    const uSure = document.createElement("div");
+    uSure.classList.add("u-sure");
+    uSure.innerHTML = `
+        <p>Din bok är reserverad! Vill du ta bort den från listan?</p>
+        <button id="yes">Ja, ta bort</button>
+        <button id="no">Nej, ha kvar</button>`;
+    sowerBook.append(uSure);
+
+    const yesBtn = document.getElementById("yes");
+    const noBtn = document.getElementById("no");
+    yesBtn.addEventListener("click", () => {
+        sowerBook.remove();
+    });
+    noBtn.addEventListener("click", () => {
+        uSure.style.visibility = "hidden";
+    })
+})
+
+const removeBtn = document.querySelector(".remove.sower");
+removeBtn.addEventListener("click", () => {
+    sowerBook.remove();
+})
+
+const expandBtn = document.querySelector(".expand");
+const expandDiv = document.querySelector("#expandable");
+expandBtn.addEventListener("click", () => {
+    if (expandBtn.classList.contains("infolded")) {
+        console.log("utfälld");
+        expandBtn.classList.replace("infolded", "outfolded");
+        expandDiv.style.position = "relative";
+        expandDiv.style.visibility = "visible";
+        expandDiv.style.top = "-0.55em";
+        expandDiv.style.left = "unset";
+    } else {
+        console.log("infälld");
+        expandBtn.classList.replace("outfolded", "infolded");
+        expandDiv.style.position = "absolute";
+        expandDiv.style.visibility = "hidden";
+        expandDiv.style.top = "22em";
+        expandDiv.style.left = "50em";
+    }
+
+
+})
+
 //---VIKTIGT---
 // - Reservera från minneslistan ("vill du ta bort från listan?")
 // - Ta bort från minneslistan
-// - Fälla ut mer info till böckerna
 // X Fixa filter, sortera

@@ -35,7 +35,7 @@
         <h3>Minneslista</h3>
         <!-- ny flik för sparade sökningar? -->
 
-        <section id="search-filter">
+        <div id="search-filter">
             <div id="text-search">
                 <input type="text" id="search" name="search" placeholder="Sök titel, författare...">
                 <button>Sök 🔍</button>
@@ -74,67 +74,77 @@
                     <option value="sve">Svenska</option>
                 </select>
             </div>
-        </section>
+        </div>
         <hr>
 
-        <section class="books listings">
+        <div class="books listings">
             <div class="bok sower">
                 <img src="img/thumbnail-sower.jpg" alt="">
                 <!-- bokomslag -->
-                <span>
+                <div>
                     <p>Liknelsen om Sådden (2019)</p>
                     <p>Butler, Octavia</p>
                     <p>Bok, fysiskt material</p>
-                </span>
+                </div>
                 <span class="buttons">
                     <button class="reserve sower">Reservera</button>
-                    <button class="remove">Ta bort 🗑️</button>
+                    <button class="remove sower">Ta bort 🗑️</button>
                 </span>
-                <button class="expand">▼</button>
+                <button class="expand infolded">▼</button>
             </div>
+            <div id="expandable">
+                <div>
+                    <p>Hylla: Hce</p>
+                    <p>Språk: sve</p>
+                </div>
+                <p>Lauren Oya Olamina är 15 år gammal. I ett USA år 2024 drabbat av finanskriser och klimatkriser är vatten dyrare än bensin, och bränder ödelägger stora delar av landet. Hon inser att det bara kommer att bli värre, och att hon och hennes familj måste jobba hårt på att överleva det som kommer. Men vem lyssnar på en femtonåring?</p>
+            </div>
+
             <div class="bok died">
                 <img src="img/thumbnail-died.jpg" alt="">
                 <!-- bokomslag -->
-                <span>
+                <div>
                     <p>The Man Who Died Twice (2021)</p>
                     <p>Osman, Richard</p>
                     <p>Bok, fysiskt material</p>
-                </span>
+                </div>
                 <span class="buttons">
                     <button class="reserve died">Reservera</button>
                     <button class="remove">Ta bort 🗑️</button>
                 </span>
                 <button class="expand">▼</button>
             </div>
+
             <div class="bok crime">
                 <img src="img/thumbnail-crime.jpg" alt="">
                 <!-- bokomslag -->
-                <span>
+                <div>
                     <p>Crime and Punsihment (2018)</p>
                     <p>Dostojevskij, Fjodor</p>
                     <p>Bok, fysiskt material</p>
-                </span>
+                </div>
                 <span class="buttons">
                     <button class="reserve crime">Reservera</button>
                     <button class="remove">Ta bort 🗑️</button>
                 </span>
                 <button class="expand">▼</button>
             </div>
+
             <div class="bok sea">
                 <img src="img/thumbnail-sea.jpg" alt="">
                 <!-- bokomslag -->
-                <span>
+                <div>
                     <p>Somewhere Beyond the Sea (2024)</p>
                     <p>Klune, TJ</p>
                     <p>Bok, fysiskt material</p>
-                </span>
+                </div>
                 <span class="buttons">
                     <button class="reserve sea">Reservera</button>
                     <button class="remove">Ta bort 🗑️</button>
                 </span>
                 <button class="expand">▼</button>
             </div>
-        </section>
+        </div>
     </main>
 </body>
 
