@@ -1,6 +1,6 @@
 // -- Låna om Drowned ---------------------------------
 const reloanBtnDrown = document.querySelector(".omlan");
-console.log(reloanBtnDrown);
+const reminderSec = document.querySelector(".sec.reminders");
 reloanBtnDrown.addEventListener("click", () => {
     const bookNoticeDrown = document.querySelector(".bok");
     bookNoticeDrown.remove();
@@ -10,6 +10,11 @@ reloanBtnDrown.addEventListener("click", () => {
     const drownLoantime = document.querySelector(".loantime");
     drownLoantime.textContent = "Lån utgår: 01-05-2026"
     drownLoantime.style.color = "green";
+    const noLoans = document.createElement("div");
+    noLoans.classList.add("textbox");
+    noLoans.innerHTML = `
+    <p>Boken är nu omlånad. Du hittar den under rubriken "Lån"</p>`;
+    reminderSec.append(noLoans);
 });
 
 //-- Ta bort Dune ---------------------------------------
@@ -32,3 +37,4 @@ removeBtnDune.addEventListener("click", () => {
 //---eventuellt---
 // Ändra hämtställe
 // visa/ändra pinkod
+// X Fälla ut mer info till böckerna

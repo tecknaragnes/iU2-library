@@ -1,8 +1,8 @@
 /* ---------- generellt ---------- */
 html {
-    --backgroundColor: #d1baae;
-    --accentColor1: #645751;
-    --accentColor2: #661628;
+    --backgroundColor: #0d0907;
+    --accentColor1: #F7E9D2;
+    --accentColor2: #823600;
     --roundBorders: 0.75em;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -12,16 +12,10 @@ body {
     margin: 0;
 }
 
-h1,
-h2,
-h3 {
-    color: #fff;
-    /* font-family: 'Franklin Gotshic Medium', 'Arial Narrow', Arial, sans-serif; */
-}
-
 
 /* ---------- header ---------- */
 header {
+    color: #fff;
     background-color: var(--accentColor2);
     padding: 0.2em 1em;
 }
@@ -42,13 +36,14 @@ nav ul {
 }
 
 nav li {
+    color: #fff;
     background-color: var(--accentColor2);
     border-top-left-radius: var(--roundBorders);
     border-top-right-radius: var(--roundBorders);
 }
 
 nav li:hover {
-    color: black;
+    background-color: #943905;
 }
 
 nav h2 {
@@ -56,7 +51,8 @@ nav h2 {
 }
 
 nav #current-page {
-    background-color: #645751;
+    color: var(--accentColor2);
+    background-color: var(--accentColor1);
 }
 
 nav a {
@@ -70,12 +66,18 @@ nav a {
 /* ---------- main ---------- */
 main {
     margin: 0 1em;
-    color: #fff;
+    color: #000;
     background-color: var(--accentColor1);
 }
 
+hr {
+    color: var(--accentColor2);
+    border: 1px solid var(--accentColor2);
+}
+
 main h3 {
-    font-size: 1.5rem;
+    color: var(--accentColor2);
+    font-size: 1.8rem;
     margin: 0;
 }
 
@@ -83,14 +85,14 @@ main .sec {
     margin: 1.75em 0 0;
 }
 
-section .sec:first-child {
+div .sec:first-child {
     margin: 0;
 }
 
 button {
     color: #fff;
     background-color: var(--accentColor2);
-    border: 1px solid #520c1b;
+    border: 1px solid #752500;
     padding: 0.4em;
     border-radius: var(--roundBorders);
     font-size: 1em;
@@ -136,6 +138,7 @@ main #right-side {
     background-color: #fff;
     color: #000;
     padding: 0.5em;
+    margin-bottom: 0.5em;
 }
 
 .textbox p {
@@ -177,8 +180,13 @@ main #right-side {
 }
 
 #text-search input {
-    width: 75%;
+    width: 65%;
     border: 2px solid var(--accentColor2);
+}
+
+#text-search button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
 #filters {
@@ -217,4 +225,41 @@ main #right-side {
 
 .bok .expand {
     margin-right: 1em;
+}
+
+#expandable {
+    background-color: #fff;
+    border: 2px solid var(--accentColor2);
+    width: 590px;
+    padding: 0.3em;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 0.75em;
+    position: absolute;
+    top: 21.5em;
+    left: 28.65em;
+    visibility: hidden;
+}
+
+#expandable p {
+    margin: 0;
+}
+
+#expandable div {
+    display: flex;
+    flex-flow: column;
+    gap: 0.5em;
+    padding-right: 0.3em;
+    border-right: 2px solid var(--accentColor2);
+}
+
+.bok.sower .u-sure {
+    position: absolute;
+    top: 22em;
+    left: 50em;
+    background-color: #fff;
+    border: 2px solid #aa0c01;
+    border-radius: var(--roundBorders);
+    padding: 0.75em;
+    box-shadow: 6px 6px 5px rgb(39, 35, 35);
 }

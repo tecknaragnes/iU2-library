@@ -99,6 +99,7 @@ const filterResult = () => {
         genreF = "";
     }
     const genreMatch = (b) => !genreF || b.genre.includes(genreF);
+    console.log(langF);
     if (langF === "all") {
         langF = "";
     }
@@ -115,7 +116,9 @@ const filterResult = () => {
 // EVENTLISTENERS --------------------------------
 const sort = document.getElementById("sort");
 const genre = document.getElementById("genre");
-const lang = document.getElementById("lang");
+const lang = document.getElementById("language");
+const rmvGenre = document.querySelector(".rmv-fltr");
+const rmvLang = document.querySelector(".rmv-fltr.langu");
 
 sort.addEventListener("input", () => {
     filterResult();
@@ -126,9 +129,25 @@ genre.addEventListener("input", () => {
     filterResult();
 })
 
-language.addEventListener("input", () => {
+lang.addEventListener("input", () => {
     langF = language.value;
     filterResult();
+})
+
+rmvGenre.addEventListener("click", () => {
+    if (genre.value !== "all") {
+        genre.value = "all";
+        genreF = "";
+        filterResult();
+    }
+})
+
+rmvLang.addEventListener("click", () => {
+    if (lang.value !== "all") {
+        lang.value = "all";
+        langF = "";
+        filterResult();
+    }
 })
 
 
