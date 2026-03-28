@@ -59,7 +59,7 @@ const renderBooks = (book) => {
                     <p>${b.form}</p>
                 </span>
                 <span class="buttons">
-                    <button class="reserve ${b.class}">Reservera</button>
+                    <button class="reserve ${b.class}">Reservera +</button>
                     <button class="remove ${b.class}">Ta bort 🗑️</button>
                 </span>
                 <button class="expand ${b.class}">▼</button>`;

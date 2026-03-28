@@ -119,6 +119,13 @@ button.omlan {
     margin-right: 1em;
 }
 
+button.omlan img,
+button.remove img,
+button#search-btn img {
+    height: 1em;
+    align-self: center;
+}
+
 
 /* ---------- översikt ---------- */
 main.overview {
