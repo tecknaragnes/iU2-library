@@ -124,6 +124,7 @@ button.remove img,
 button#search-btn img {
     height: 1em;
     align-self: center;
+    /* något har hänta här??? */
 }
 
 
